@@ -6,7 +6,7 @@ namespace project\apps\back_end\widgets\header;
  * 
  * Header
  * 
- * @author Christopher Beck <chris.beck@jpmh.co.uk> & Alessandro Barzanti <alessandro.barzanti@jpmh.co.uk>
+ * @author Christopher Beck <cwbeck@gmail.com> & Alessandro Barzanti <a.barzanti@gmail.com>
  * @version SVN: $id
  * @package widgets
  * @subpackage header

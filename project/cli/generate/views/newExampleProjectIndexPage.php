@@ -6,7 +6,7 @@ namespace project\apps\{{ projectName }}\pages\index;
  * 
  * Index
  * 
- * @author Christopher Beck <chris.beck@jpmh.co.uk>
+ * @author Christopher Beck <cwbeck@gmail.com>
  * @version SVN: $id
  * @package pages
  * @subpackage index

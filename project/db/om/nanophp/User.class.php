@@ -6,7 +6,7 @@ namespace project\db\om\nanophp;
  * 
  * User
  * 
- * @author Christopher Beck <chris.beck@jpmh.co.uk>
+ * @author Christopher Beck <cwbeck@gmail.com>
  * @version SVN: $id
  * @package om
  * @subpackage nanophp

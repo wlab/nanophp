@@ -20,7 +20,7 @@ namespace project\db\om\{{ database }}\base;
  * 
  * Base{{ modelName }}
  * 
- * @author Christopher Beck <chris.beck@jpmh.co.uk>
+ * @author Christopher Beck <cwbeck@gmail.com>
  * @version SVN: $id
  * @package {{ database }}
  * @subpackage base

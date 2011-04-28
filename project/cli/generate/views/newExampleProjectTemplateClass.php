@@ -6,7 +6,7 @@ namespace project\apps\{{ projectName }}\templates;
  * 
  * PageTemplate
  * 
- * @author Christopher Beck <chris.beck@jpmh.co.uk>
+ * @author Christopher Beck <cwbeck@gmail.com>
  * @version SVN: $id
  * @package {{ projectName }}
  * @subpackage templates

@@ -6,7 +6,7 @@ namespace project\cli\cron;
  * 
  * {{ className }}
  * 
- * @author Christopher Beck <chris.beck@jpmh.co.uk>
+ * @author Christopher Beck <cwbeck@gmail.com>
  * @version SVN: $id
  * @package cli
  * @subpackage cron
