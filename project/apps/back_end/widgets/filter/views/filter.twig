@@ -1,0 +1,33 @@
+{% import 'project/apps/back_end/forms/form.twig' as form %}
+
+{% block outer_script %}
+<script>
+	{% block inner_script %}
+	$(function() {
+		$( "button, input:submit", ".filterOptions" ).button({
+			icons: {
+		    	primary: 'ui-icon-circle-check'
+		}});
+		$(".form-radio-group-container").buttonset();
+	});
+	{% endblock inner_script %}
+</script>
+{% endblock outer_script %}
+
+<div class="ui-widget-content nano-admin-widget ui-corner-all">
+	<h3 class="ui-widget-header ui-corner-all">{{ 'admin.filter' | i18n('Filter') }}</h3>
+	<div class="filterOptions">
+		<table cellpadding="5">
+			{% for key, params in filterForm %}
+				<tr>
+					<td valign="top">{{ form.adminLabel(params.label) }}</td>
+					<td valign="top">{{ form.buildAdminForm(params) }}</td>
+				</tr>
+			{% endfor %}
+			<tr>
+				<td>&nbsp;</td>
+				<td align="right">{{ form.adminButton(filterButton) }}</td>
+			</tr>
+		</table>
+	</div>
+</div>

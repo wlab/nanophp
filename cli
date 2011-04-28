@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+<?php
+
+function i18n($key,$defaultValue='') {
+	return \site\core\i18n\I18n::getInstance()->get($key,$defaultValue);
+}
+
+function view($path,$objs=array()) {
+	\site\core\view\View::load($path,$objs);
+}
+
+$_SERVER['SCRIPTS_LOAD_FROM'] = $_SERVER['PWD'].'/';
+error_reporting(E_ALL);
+require_once($_SERVER['SCRIPTS_LOAD_FROM'].'nano/core/autoloader/Autoloader.class.php');
+\nano\core\autoloader\Autoloader::register();
+new \nano\core\cli\Cli();

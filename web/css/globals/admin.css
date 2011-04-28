@@ -1,0 +1,44 @@
+body {
+	font-family: Verdana, Arial;
+	font-size: 12px;
+}
+
+.connectedSortableContainer {
+	min-height:300px;
+	max-height:600px;
+	overflow: auto;
+	background:#FFFFFF;
+	margin-top:0px;
+	padding-top:0px;
+}
+.connectedSortable {
+	list-style-type:none;
+	padding: 5px;
+}
+.connectedSortable li {
+	padding: 10px;
+	margin-left: 0px;
+	margin-bottom:5px;
+	margin-right:5px;
+	cursor: pointer !important;
+}
+.list-placeholder {
+	height: 70px;
+}
+.row-partition {
+	margin-top: 10px;
+	padding: 10px 5px 10px 5px;
+}
+
+.nano-admin-list-tr { }
+.nano-admin-list-tr.even {  }
+.nano-admin-list-tr.odd { background: url('/img/globals/tiles/90percentwhite.png'); }
+
+.nano-admin-state-highlight { padding: 0.5em; margin-bottom: 10px; margin-top: 10px; }
+.nano-admin-state-error { padding: 0.5em; margin-bottom: 10px; margin-top: 10px; }
+
+.nano-admin-widget-left-menu { padding: 0.5em; width:200px; margin-bottom: 10px; }
+.nano-admin-widget-left-menu h3 { margin: 0; font-size: 1em; padding: 6px; margin-bottom: 10px; }
+
+.nano-admin-widget { padding: 0.5em; margin-bottom: 10px; }
+.nano-admin-widget h3 { margin: 0; font-size: 1em; padding: 6px; margin-bottom: 10px; }

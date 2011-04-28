@@ -1,0 +1,55 @@
+{% import 'project/apps/back_end/forms/form.twig' as form %}
+
+{% block outer_script %}
+<script>
+	{% block inner_script %}
+	$(function() {
+		$( "button, input:submit", ".add-options" ).button({
+			icons: {
+		    	primary: 'ui-icon-circle-arrow-s'
+		}}).next().button({
+			icons: {
+			    primary: 'ui-icon-circle-arrow-s',
+				secondary: 'ui-icon-circle-zoomin'
+		}});
+		
+		$(".form-radio-group-container").buttonset();
+	});
+	{% endblock inner_script %}
+</script>
+{% endblock outer_script %}
+
+{% block form_construct %}
+<form enctype="multipart/form-data" method="POST" action="">
+{% endblock form_construct %}
+	<div class="ui-widget-content nano-admin-widget add-options ui-corner-all">
+		<h3 class="ui-widget-header ui-corner-all">{{ 'admin.add-record' | i18n('Add Record') }}</h3>
+		<table cellpadding="5">
+			
+			{% if isSaved == true %}
+			<div class="ui-state-highlight nano-admin-state-highlight ui-corner-all">{{ 'admin.add.record.added' | i18n('Record Added') }}</div>
+			{% endif %}
+
+			{% for key, value in addErrors %}
+			<div class="ui-state-error nano-admin-state-error ui-corner-all">{{ value }}</div>
+			{% endfor %}
+			
+			{% if addForm %}
+				{% for key, params in addForm %}
+					{% block row %}
+					<tr>
+						<td valign="top">{{ form.adminLabel(params.label) }}</td>
+						<td valign="top">{{ form.buildAdminForm(params) }}</td>
+					</tr>
+					{% endblock row %}
+				{% endfor %}
+				{% block buttons %}
+				<tr>
+					<td>&nbsp;</td>
+					<td align="right">{{ form.adminButton(addButton) }}{{ form.adminButton(addAndPreviewButton) }}</td>
+				</tr>
+				{% endblock buttons %}
+			{% endif %}
+		</table>
+	</div>
+</form>

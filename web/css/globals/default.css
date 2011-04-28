@@ -1,0 +1,94 @@
+.form-error {
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #F2D8DB;
+	border: 1px solid #913C33;
+	text-align: center;
+}
+
+.form-message {
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #E5F2D8;
+	border: 1px solid #679133;
+	text-align: center;
+}
+
+.form-text-container {
+	padding: 5px;
+	border: 1px #1C1C1C solid;
+	background: #FFFFFF;
+}
+
+.form-text {
+	font-size: 1.1em;
+	background: none;
+	border: none;
+}
+
+.form-file {
+	font-size: 1.1em;
+}
+
+textarea.form-textarea {
+	width: 800px;
+	height: 200px;
+	border: 1px solid #1C1C1C;
+	padding: 5px;
+	font-family: Verdana, Arial;
+	font-size: 0.9em;
+}
+
+.form-password {
+	font-size: 1.1em;
+	background: none;
+	border: none;
+}
+
+.form-submit-button {
+	font-size: 1.1em;
+}
+
+.widget-title {
+	padding-top: 10px;
+	padding-bottom: 2px;
+	margin-bottom: 10px;
+	font-size: 1.2em;
+	border-bottom: 1px solid #1C1C1C;
+	text-align: left;
+}
+
+.core-logging-bar {
+	position: absolute;
+	z-index: 1000;
+	top: 0;
+	right: 0;
+	padding: 10px;
+	background: url('/img/globals/tiles/90percentwhite.png');
+	font-size: 0.8em;
+	border-bottom: 1px #D7D7D7 solid;
+	border-left: 1px #D7D7D7 solid;
+}
+
+.core-logging-bar-title {
+	margin: 6px 0px 2px 0px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	border-bottom: 1px #D7D7D7 solid;
+}
+
+.core-logging-bar-body {
+	margin: 2px 0px 2px 0px;
+	font-weight: normal;
+}
+
+.core-logging-bar-item {
+	margin: 1px 0px 1px 0px;
+	font-weight: normal;
+}
+
+.click-span {
+	cursor: pointer !important;
+}

@@ -1,0 +1,14 @@
+<div style="width:100%;overflow:auto;background:#FFFFFF;font-size:1em;font-family:Verdana,Arial;color:#000000;border:1px #000000 solid">
+	<div style="background:#000000;font-size:1.1em;color:#FFFFFF;padding:10px"><strong>NanoPHP - Uncaught Exception</strong></div>
+	{% for data in exceptionData %}
+	<div>
+		<div style="background:#FFFFFF;font-size:1em;padding:10px">Message: <strong>{{ data.message }}</strong></div>
+		<div style="background:#E7E7E7;font-size:1em;padding:10px">An '<strong>{{ data.type }}</strong>' exception was thrown in <span style="font-size:0.8em"><strong><em>{{ data.file }}</em></strong></span> on line #<strong>{{ data.line }}</strong></div>
+<div style="background:#F7F7F7;font-size:0.9em;padding:10px">
+<pre>
+{{ data.trace_as_string }}
+</pre>
+</div>
+	</div>
+	{% endfor %}
+</div>

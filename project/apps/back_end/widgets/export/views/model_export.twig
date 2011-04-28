@@ -1,0 +1,15 @@
+{% import 'project/apps/back_end/forms/form.twig' as form %}
+
+<script>
+	$(function() {
+		$("a, button, input:submit", ".export-options").button({
+			icons: {
+		    	primary: 'ui-icon-circle-arrow-s'
+		}});
+	});
+</script>
+
+<div class="ui-widget-content nano-admin-widget export-options ui-corner-all">
+	<h3 class="ui-widget-header ui-corner-all">{{ 'admin.model-export' | i18n('Export') }}</h3>
+	<a href="/ajax/{{ database }}/{{ model }}/export-as-csv" target="_blank">Export As CSV</a>
+</div>

@@ -1,0 +1,45 @@
+{% macro buildAdminForm(params) %}
+	{% if params.input.inputType == 'text' %}
+		{{ _self.adminInputText(params.input) }}
+	{% elseif params.input.inputType == 'textarea' %}
+		{{ _self.adminInputTextArea(params.input) }}
+	{% elseif params.input.inputType == 'file' %}
+		{{ _self.adminInputFile(params.input) }}
+	{% elseif params.input.inputType == 'radio' %}
+		{{ _self.adminInputRadio(params.input) }}
+	{% endif %}
+{% endmacro %}
+
+{% macro adminLabel(params) %}
+	<div class="{{ params.class | default('form-label') }}" style="{{ params.style | default('form-label') }}">{{ params.value }}: </div>
+{% endmacro %}
+
+{% macro adminButton(params) %}
+	<button id="{{ params.buttonName | default('submit-form') }}" class="{{ params.buttonClass | default('form-' ~ type | default('submit') ~ '-button') }}" style="{{ params.buttonStyle }}" type="{{ params.buttonType | default('submit') }}" name="{{ params.buttonName | default('submit-form') }}" value="{{ params.buttonValue | e }}">{{ params.buttonLabel | default('Submit') }}</button>
+{% endmacro %}
+
+{% macro adminInputText(params) %}
+	<div class="form-text-container">
+		<input id="{{ params.inputName }}" class="{{ params.inputClass | default('form-' ~ type | default('text')) }}" style="{{ params.inputStyle }}" type="{{ params.inputType | default('text') }}" name="{{ params.inputName }}" value="{{ params.inputValue | e }}" size="{{ params.inputSize | default(50) }}" />
+	</div>
+{% endmacro %}
+
+{% macro adminInputTextArea(params) %}
+	<div>
+		<textarea id="{{ params.inputName }}" class="{{ params.inputClass | default('form-textarea') }}" style="{{ params.inputStyle }}" name="{{ params.inputName }}">{{ params.inputValue | e }}</textarea>
+	</div>
+{% endmacro %}
+
+{% macro adminInputFile(params) %}
+	<div>
+		<input id="{{ params.inputName }}" class="{{ params.inputClass | default('form-file') }}" style="{{ params.inputStyle }}" type="file" name="{{ params.inputName }}" value="{{ params.inputValue | e }}" size="{{ params.inputSize | default(25) }}" />
+	</div>
+{% endmacro %}
+
+{% macro adminInputRadio(params) %}
+	<div class="form-radio-group-container">
+	{% for key, value in params.inputValue %}
+		<input id="{{ params.inputName }}{{ loop.index }}" class="{{ params.inputClass | default('form-radio-group') }}" style="{{ params.inputStyle }}" type="radio" name="{{ params.inputName }}" value="{{ key }}" {% if params.inputDefaultValue == key %}checked="checked"{% endif %} /><label for="{{ params.inputName }}{{ loop.index }}">{{ value }}</label>&nbsp;
+	{% endfor %}
+	</div>
+{% endmacro %}
