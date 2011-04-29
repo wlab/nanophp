@@ -5,7 +5,7 @@
  * 
  * Example
  * 
- * @author Christopher Beck <chris.beck@jpmh.co.uk>
+ * @author Christopher Beck <cwbeck@gmail.com>
  * @version SVN: $id
  */
 class Example extends \nano\core\test\Unit

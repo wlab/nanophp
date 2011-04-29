@@ -20,7 +20,7 @@ namespace project\db\om\nanophp\base;
  * 
  * BaseAuth
  * 
- * @author Christopher Beck <chris.beck@jpmh.co.uk>
+ * @author Christopher Beck <cwbeck@gmail.com>
  * @version SVN: $id
  * @package nanophp
  * @subpackage base
