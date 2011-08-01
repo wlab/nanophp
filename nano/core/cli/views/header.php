@@ -9,6 +9,7 @@
 Authors{
 	- Christopher Beck (cwbeck@gmail.com)
 	- Alex Cipriani (alexcip@gmail.com)
+	- Alessandro Barzanti (a.barzanti@gmail.com)
 }
 Created: 12/10/2010
 Last Updated: 12/10/2010

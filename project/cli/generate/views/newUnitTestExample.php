@@ -8,7 +8,7 @@
  * @author Christopher Beck <cwbeck@gmail.com>
  * @version SVN: $id
  */
-class Example extends \nano\core\test\Unit
+class Example extends PHPUnit_Framework_TestCase
 {
 	/**
 	 * Function - Test Push And Pop
