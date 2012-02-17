@@ -6,7 +6,7 @@ class PageTemplate extends \nano\core\page\Page {
 	protected $headerWidget = null;
 	
 	protected function preExecute(\nano\core\routing\Routing $routing) {
-		$this->headerWidget = new \project\apps\back_end\widgets\header\Header();
+		$this->headerWidget = new \project\globals\widgets\header\Header();
 		$this->headerWidget->addStyleSheet('/css/globals/admin.css');
 		$this->headerWidget->addStyleSheet('/css/globals/default.css');
 		$this->headerWidget->addStyleSheet('/css/globals/jquery/plugins/ui/'.\nano\core\config\Config::get('jquery_theme').'/jquery-ui-1.8.5.custom.css');

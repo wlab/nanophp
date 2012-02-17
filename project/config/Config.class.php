@@ -5,7 +5,7 @@ class Config extends \nano\core\config\Config {
 	
 	public static $autoloads = array(
 		'Twig' => array(
-			'include_path' => 'lib/Twig-1.0.0-RC1/lib/Twig/Autoloader.php',
+			'include_path' => 'lib/Twig-1.6/lib/Twig/Autoloader.php',
 			'class_name' => 'Twig_Autoloader',
 			'call_function_name' => 'register',
 			'call_function_parameters' => array(),

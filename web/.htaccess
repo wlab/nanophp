@@ -10,11 +10,6 @@ RewriteRule ^favicon.ico$ favicon.ico [L]
 RewriteRule	^(css|js|img|assets)/(.*)$ $1/$2 [L]
 
 # ####### Dev ##########
-RewriteCond %{HTTP_HOST} ^www\.example\.dev$
-RewriteRule	.* index.php [L,E=PROJECT_APP:front_end,E=PROJECT_ENV:Dev]
-# #######################
-
-# ####### Dev ##########
-RewriteCond %{HTTP_HOST} ^admin\.example\.dev$
-RewriteRule	.* index.php [L,E=PROJECT_APP:back_end,E=PROJECT_ENV:Dev]
+RewriteCond %{HTTP_HOST} ^nanophp\.dev$
+RewriteRule	.* index.php [L,E=PROJECT_APP:example,E=PROJECT_ENV:Dev]
 # #######################
