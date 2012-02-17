@@ -15,21 +15,19 @@ var NJSCORE = {};
 // Site JS Core - Add Class Extension Function
 //************************************************************************
 NJSCORE['extend'] = function(namespace,obj){
-	if(namespace!='extend'){
-		var namespaces = namespace.split('.');
-		var objPointer = NJSCORE;
-		if(namespaces.length>1){
-			for(var i=0;i<(namespaces.length-1);i++){
-				var currentNamespace = namespaces[i];
-				if(!objPointer[currentNamespace]){
-					objPointer[currentNamespace] = {};
-				}
-				objPointer = objPointer[currentNamespace];
+	var namespaces = namespace.split('.');
+	var objPointer = NJSCORE;
+	if(namespaces.length>1){
+		for(var i=0;i<(namespaces.length-1);i++){
+			var currentNamespace = namespaces[i];
+			if(!objPointer[currentNamespace]){
+				objPointer[currentNamespace] = {};
 			}
-			namespace = namespaces[namespaces.length-1];
+			objPointer = objPointer[currentNamespace];
 		}
-		objPointer[namespace] = new obj;
+		namespace = namespaces[namespaces.length-1];
 	}
+	objPointer[namespace] = new obj;
 }
 //************************************************************************
 // Site JS Core - Extend with Logging Bar Class
